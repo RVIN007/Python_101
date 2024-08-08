@@ -1,0 +1,46 @@
+#Classes and Instances and Variables
+
+#self is an instance
+class ContactList:
+    
+    friends_number=0
+    
+    def __init__(self,Name,Last_Name,Cellphone):
+        self.Name=Name
+        self.Last_Name=Last_Name
+        self.Cellphone=Cellphone
+        self.Email=Name +'.'+Last_Name+'@aol.com'
+
+        ContactList.friends_number += 1
+
+     #Creating a method   
+    def fullname(self):
+        return'{} {}'.format(self.Name,self.Last_Name)
+                  
+
+Friend_1=ContactList('John','Smith','8759648957')
+Friend_2=ContactList('Jane','Doe','5658448475')
+
+
+print(ContactList.friends_number)
+print("\n##################################\n")
+
+print(Friend_1.fullname())
+print(Friend_2.fullname())
+print("\n##################################\n")
+
+print(ContactList.fullname(Friend_1))
+print(ContactList.fullname(Friend_2))
+
+print("\n##################################\n")
+#To access the attribute of an instance
+print(Friend_1.__dict__)
+
+
+print("\n##################################\n")
+#To access the attribute of an instance
+print(Friend_2.__dict__)
+
+print("\n##################################\n")
+#To access the attribute of a class
+print(ContactList.__dict__)

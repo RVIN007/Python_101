@@ -1,0 +1,165 @@
+#Python_Dictionary_Basic_Practice_3
+
+Employee_Dic={'George':'Civil Engineer', 'Mary':'Accountant', 'Tony':'Technician'}
+
+print(Employee_Dic)
+print()
+
+Employee_Dic_Length=len((Employee_Dic))
+
+print("Our Employee Dictionary length is " ,Employee_Dic_Length)
+
+#Adding Elements to an Existing Dictionary
+#dictionary_name[key] = value
+
+Employee_Dic['Katie']='Senior Clerk'
+Employee_Dic['Jane']='Supervisor'
+
+print(Employee_Dic)
+print()
+
+Employee_Dic_Length=len((Employee_Dic))
+
+print("After adding two element our Employee Dictionary length became " ,Employee_Dic_Length)
+
+#Deleting Elements
+#del dictionary_name[key]
+
+del Employee_Dic['George']
+
+print(Employee_Dic)
+print()
+
+Employee_Dic_Length=len((Employee_Dic))
+
+print("After deleting George from Employee Dictionary , the length became " ,Employee_Dic_Length)
+
+
+#Using the for Loop to Iterate over a Dictionary
+#for var in dictionary:
+#    statement
+#    statement
+#    etc.
+
+for var in Employee_Dic:
+    print(var)
+print('********************')
+for var in Employee_Dic:
+    print(var,'------>',Employee_Dic[var])
+
+#its better to use 'key' instead of 'var'
+print('********************')
+
+
+#Python dictionary copy() Method----->The method copy() returns a shallow copy of the dictionary.
+#Syntax: dict.copy()
+#example : Dict2=Dict1.copy
+
+Employee_Dic2=Employee_Dic.copy()
+print('Our Second dictionary is a shallow copy of our first dictionary ')
+print(' Second Employee Dictionary :')
+print(Employee_Dic2)
+
+
+
+#The clear method deletes all the elements in a dictionary, leaving the dictionary empty.
+#The method’s general format is
+#dictionary.clear()
+print('We can use .clear method to clear method deletes all the elements in a dictionary, leaving the dictionary empty.')
+Employee_Dic2.clear()
+print('Second Employee Dictionary elements are deleted :')
+print('Second Employee Dictionary :')
+print(Employee_Dic2)
+
+print('********************')
+
+
+
+#The get Method
+#get method is an alternative to the [] operator for getting a value from
+#a dictionary. The get method does not raise an exception if the specified key is not found.
+#dictionary name.get(key, default)
+#key is a key to search for in the dictionary,
+#default value to return if the key is not found.
+
+Value1=Employee_Dic.get('Mary','The name not found.')
+print(Value1)
+Value2=Employee_Dic.get('George','The name not found.')
+print(Value2)
+
+print('********************')
+
+
+#The items Method
+#The items method returns all of a dictionary’s keys and their associated values.
+#dictionary name.items() method, it returns values in sequence known as a 'dictionary view' 
+#It is possible to use the for loop to iterate over the tuples in the sequence. The following interactive
+#session demonstrates:
+#for key, value in phonebook.items(): 
+#   print(key, value)
+print("Our Employee dictionary all keys and their associated values are listed in the following lines based on 'dictionary view':")
+for key, value in Employee_Dic.items(): 
+    print(key,'------>',value)
+
+print('********************')
+
+
+
+
+#The keys Method
+#The keys method returns all of a dictionary’s keys as a dictionary view, which is a type of
+#sequence. Each element in the dictionary view is a key from the dictionary.
+print("Our Employee dictionary all keys are listed in the following lines based on 'dictionary view':")
+for key in Employee_Dic.keys():
+    print(key)
+    
+print('********************')
+
+
+
+
+
+#The pop Method
+#dictionary.pop(key, default)
+#The pop method returns the value associated with a specified key and removes that keyvalue
+#pair from the dictionary. If the key is not found, the method returns a default value.
+print('We remove one item with its values from our Employee dictionary with .pop(key, default)method: ')
+Remove_Item1=Employee_Dic.pop('Mary','The name not found.')
+for key, value in Employee_Dic.items(): 
+    print(key,'------>',value)
+
+print('Result: Mary and all her values removed from Employee dictionary')    
+print('         ****        ')
+print("Now we want to try to Remove 'Leo'and its all values from dictionary: ")
+print("Note: We dont have any element with name of 'Leo' so it gives us an error by default:  ")
+Remove_Item2=Employee_Dic.pop('Leo','The name not found')
+print(Remove_Item2)    
+
+print('********************')
+
+
+
+#The popitem Method
+#The popitem method returns a randomly selected key-value pair, and it removes that keyvalue
+#pair from the dictionary.
+#dictionary.popitem()
+
+
+
+
+
+#The values Method
+#The values method returns all a dictionary’s values (without their keys) as a dictionary
+#view, which is a type of sequence.
+#dictionary.values():
+print("All values of our elements in the Employee dictionary are listed in the following lines based on 'dictionary view'\n\n")
+
+for val in Employee_Dic.values():
+    print(val,'\n')
+print()
+print('********************')
+
+
+
+
+

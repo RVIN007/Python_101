@@ -1,0 +1,6 @@
+# Save a dictionary into a pickle file(.dat file).
+
+import pickle
+
+MyPetsName_Dictionary={'Cat':'Lucy','Dog':'Runner'}
+pickle.dump( MyPetsName_Dictionary, open( "MyPetsName.dat", "wb" ) )

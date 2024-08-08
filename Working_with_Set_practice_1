@@ -1,0 +1,149 @@
+#Working_with_Set_practice_1
+
+#Creating a Set
+set_1 = set()
+
+print("If you pass a string as an argument to the set function,\n"
+"each individual character in the string becomes a member of the set.\n")
+print("For example: FOX NEWS\n")
+
+set_1=set('FOX NEWS')
+print(set_1)
+
+print("\nSets cannot contain duplicate elements. If you pass an argument containing duplicate\n"
+"elements to the set function, only one of the duplicated elements will appear in the set.\n")
+
+print("For example: CNN NEWS Channel \n")
+set_1=set('CNN NEWS Channel')
+print(set_1)
+
+
+
+#create a set in which each element is a string containing more than one character.
+print("create a set in which each element is a string containing more than one character.\n")
+
+set_1 = set(['Barack Hussein Obama II','born August 4, 1961','Honolulu,Hawaii, U.S.','44th president of the United States (2009–17)'])
+print(set_1)
+
+#Using len function in set
+print("\n\nThe length of this set is  ",len(set_1),"\n")
+print("\n*************************************")
+
+
+
+#Using the for Loop to Iterate over a Set
+print("Using the for Loop to Iterate over a Set\n\n")
+for val in set_1: 
+   print(val)
+print("\n*************************************\n")
+
+
+
+#Using the in and not in Operators to Test
+#for a Value in a Set
+
+print("Using the in and not in Operators to Test:")
+print("for a Value (not)in a Set\n")
+if 'George W. Bush' not in set_1:
+    print("\nThe value George W. Bush is not in the set.\n")
+if 'Barack Hussein Obama II' in set_1:
+    print("\nThe value Barack Hussein Obama II is in the set.\n")    
+print("\n*************************************\n")
+
+#Adding and Removing Elements in set
+#set.add(something)
+
+print("Adding and Removing and Updating Elements in set\n")
+set_1.add('Nicknames: "Barry"')
+print(set_1)
+print("\n*************************************\n")
+
+set_2=set()
+set_2.add('Richard Milhous Nixon')
+set_2.add(' the 37th President of the United States')
+set_2.add('serving from 1969 until 1974')
+set_2.update(['born in Yorba Linda', 'served on active duty in the U.S. Navy Reserve during World War II.'])
+print(set_2)
+print("\n*************************************\n")
+print("\nUpdating Set 1 with adding  Set 2 elements in set 1 :\n ")
+set_1.update(set_2)
+print(set_1)
+print("\n*************************************\n")
+
+
+#Finding the Union of sets
+print("Finding the Union of sets")
+
+print("set_A=([1,2,3,4])")
+set_A=set([1,2,3,4])
+print("set_B=([4,5,6,7,8])")
+set_B=set([4,5,6,7,8])             
+print("Union of Set A and set B is: \n")
+set_C = set_A.union(set_B)
+print('set_C has:')
+print(set_C )
+
+#You can also use the | operator to find the union of two sets.
+print("\nYou can also use the | operator to find the union of two sets.\n")
+# set_C = set_A | set_B
+print("\nset3 = set1 | set2\n")
+set_M = set_A | set_B
+print("set_M:",set_M )
+print("\n*************************************\n")
+
+
+
+#Finding the Intersection of Sets
+print("\nFinding the Intersection of Sets:\n")
+print("set3 = set1.intersection(set2)")
+print("\nor\n")
+print("set3 = set1 & set2")
+print("\n*************************************\n")
+
+
+
+#Finding the Difference of Sets
+print("\nFinding the Difference of Sets:\n")
+print("set3 = set1.difference(set2)")
+print("\nor\n")
+print("set3 = set1 − set2")
+print("\n*************************************\n")
+
+
+
+#Finding the Symmetric Difference of Sets
+print("\nFinding the Symmetric Difference of Sets:\n")
+print("The symmetric difference of two sets is a set that contains the elements that are not shared")
+print("by the sets. In other words, it is the elements that are in one set but not in both.")
+print("set3 = set1.symmetric_difference(set2)")
+print("\nor\n")
+print("set3 = set1 ^ set2")
+print("\n*************************************\n")
+
+
+#Finding Subsets and Supersets
+print("Finding Subsets and Supersets")
+print("In the general format, set1 and set2 are sets. The method returns True if set1 is a superset")
+print("of set2. Otherwise, it returns False.")
+print("set1 = set([1, 2, 3, 4])")
+print("set2 = set([2, 3])")
+print("set2.issubset(set1)")
+set1 = set([1, 2, 3, 4])
+set2 = set([2, 3])
+print(set2.issubset(set1))
+
+print("\n------\n")
+
+print("You can also use the <= operator to determine whether one set is a subset of another and")
+print("the >= operator to determine whether one set is a superset of another. Here is the general")
+print("format of an expression using the <= operator with two sets:")
+print("set2 <= set1")
+print("In the general format, set1 and set2 are sets. The expression returns True if set2 is a")
+print("subset of set1. Otherwise, it returns False. Here is the general format of an expression")
+print("using the >= operator with two sets:")
+print("set1 >= set2")
+
+print("\n*************************************\n")
+
+
+

@@ -1,0 +1,69 @@
+#Python_Dictionary_Basic_Practice
+
+#Create an empty dictionary
+Employyes={}
+
+
+Employees={'Jack':{'Last name':'Morgan','salary':1200,'Age':22},\
+           'Lucy':{'Last name':'lindy','salary':5400,'Age':30},\
+           'Miranda':{'Last name':'Blung','salary':8200,'Age':48}
+           }
+#Access values in a dictionary
+EmployeeNumber1=Employees['Jack']
+EmployeeNumber2=Employees['Lucy']
+EmployeeNumber2=Employees['Lucy']
+
+#Print a dictionary
+print(Employees)
+
+
+print('------------------------------------------------------------\n\n')
+
+print(EmployeeNumber2)
+
+print('------------------------------------------------------------\n\n')
+
+#Find the length of the dictionary
+len(Employees)
+print("The length of the Employees dictionary is ",len(Employees))
+
+print('------------------------------------------------------------\n\n')
+
+
+#Insert an entry in the dictionary
+Employees={'Jack':{'Last name':'Morgan','salary':1200,'Age':22},\
+           'Lucy':{'Last name':'lindy','salary':5400,'Age':30},\
+           'Miranda':{'Last name':'Blung','salary':8200,'Age':48}
+           }
+Employees['James']={'Last name':'Clark','salary':3400,'Age':40,'Position': 'Clerk'}
+print(Employees)
+
+print('------------------------------------------------------------\n\n')
+#Delete an entry from the dictionary
+
+del EmployeeNumber2['Age']
+print(EmployeeNumber2)
+
+
+
+print('------------------------------------------------------------\n\n')
+
+#Get all the entries from the dictionary
+myList = Employees.items()
+for x in myList:
+ print(x)
+ 
+print('------------------------------------------------------------\n\n')
+
+#Get all keys from the dictionary
+myList = Employees.keys()
+for x in myList:
+ print(Employees.get(x))
+
+
+print('------------------------------------------------------------\n\n')
+
+
+
+
+           

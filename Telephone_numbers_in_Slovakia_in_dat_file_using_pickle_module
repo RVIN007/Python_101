@@ -1,0 +1,18 @@
+#Telephone_numbers_Writing_Saving_in_dat_file_using-pickle_module
+
+#Usineg pickle Module tp save  Telephone numbers in binary format in .dat file
+
+import pickle
+
+#Telephone_numbers_in_Slovakia
+Slovakia={'General emergency':'112','Fire brigade':'150','Ambulance':'155','Police':'158','Municipal police':'159'}
+
+#opens a file named Slovakia.dat for binary writing.
+outputfile = open('Slovakia.dat', 'wb')
+
+
+#pickle module’s dump function to serialize the Slovakia dictionary
+#and write it to the Slovakia.dat file.
+
+pickle.dump(Slovakia,outputfile)
+outputfile.close()

@@ -1,0 +1,55 @@
+#Compare_Supermarket_shopping_lists_with_set
+
+# This program demonstrates various set operations.
+
+print("Mr. & Mrs. Smith went to a supermarket to buy groceries\
+each of them pick some items and now they want to check their items")
+
+
+
+# Display Mrs. Smith shopping list in a set.
+print('Display Mrs. Smith shopping list in a set:\n\n')
+
+Mrs_Smith=set(['Soda','Milk','Bread','Milk','Pasta','Rice','fresh vegetables','nuts', 'seeds', 'lentils', 'beans','edamame'])
+for shopping in Mrs_Smith:
+    print(shopping)
+
+print("\n############################\n")
+# Display Mr Smith shopping list in a set.
+print('Display Mr Smith shopping list in a set:')
+
+
+Mr_Smith=set(['Milk','Pasta','popcorn', 'Bread','beer'])
+for shopping in Mr_Smith:
+    print(shopping)
+
+print("\n############################\n")
+#Union of two list    
+print("Union of two list :\n")
+
+Union_set=Mr_Smith | Mrs_Smith
+for shopping in Union_set:
+    print(shopping)
+
+
+print("\n############################\n")
+#Intersection of two list   
+print("Intersection of two list :\n")
+
+Intersection_set=Mr_Smith & Mrs_Smith
+for shopping in Intersection_set:
+    print(shopping)
+
+
+print("\n############################\n")
+#Symmetric Difference of two list   
+print("Symmetric Difference of two list :\n")
+print("The symmetric difference of two sets is a set\n"
+"that contains the elements that are not shared by the\n"
+"sets.In other words, it is the elements that are in\n"
+"one set but not in both.\n")
+
+
+Intersection_set=Mr_Smith ^ Mrs_Smith
+for shopping in Intersection_set:
+    print(shopping)

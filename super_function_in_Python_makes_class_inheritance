@@ -1,0 +1,26 @@
+#super() function in Python makes class inheritance
+
+print("Employee information is:\n")
+class Employee():
+    def __init__(self,first,last,pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+class Developer(Employee):
+    def __init__(self,first, last, pay, prog_lang):
+        super().__init__(first,last,pay)
+        self.prog_lang = prog_lang
+        self.email=first+'.'+last+'@company.com'
+Guy_1=Developer('John','Smith',5500,'Python')
+Guy_2=Developer('Mark','Hopkins',6000,'C')
+print(Guy_1.first)
+print(Guy_1.last)
+print("$",Guy_1.pay,"per month")
+print("Programming language: ",Guy_1.prog_lang)
+print("Email address: ",Guy_1.email)
+print("\n##################################################\n")
+print(Guy_2.first)
+print(Guy_2.last)
+print("$",Guy_2.pay,"per month")
+print("Programming language: ",Guy_2.prog_lang)
+print("Email address: ",Guy_2.email)

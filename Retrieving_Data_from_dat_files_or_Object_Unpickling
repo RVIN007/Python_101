@@ -1,0 +1,36 @@
+#Retrieving_Data_from_dat_files_or_Object_Unpickling
+
+import pickle
+
+def main():
+    end_of_file = False # To indicate end of file
+
+   #Open a file for binary reading.
+    input_file = open('Account.dat', 'rb')
+    
+    #Read to the end of the file.
+    while not end_of_file:
+        try:
+             #Unpickle the next object.
+             Account = pickle.load(input_file)
+             # Display the object.
+             display_data(Account)
+        except EOFError:
+            # Set the flag to indicate the end
+            # of the file has been reached.
+            end_of_file = True
+            
+
+    # Close the file.
+    input_file.close()
+
+# The display_data function displays the Account data
+# in the dictionary that is passed as an argument.
+def display_data(Account):
+    print('Username:', Account['Username'])
+    print('Password:', Account['Password'])
+    print()
+
+# Call the main function.
+main()
+     

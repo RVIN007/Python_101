@@ -1,0 +1,34 @@
+#Multiple inheritances and Super() function
+
+class Car():
+    def __init__(self,CarName):
+        print(CarName,"Old School people consider Mercedes Benz as a Luxury car")
+
+# CLS inherits Car  
+class CLS(Car):
+    def __init__(self,CLS_series):
+        print(CLS_series,"It is good to know that Mercedes-Benz CLS-Class is\n"
+          "a series of executive cars produced by Mercedes-Benz since 2004")
+        super().__init__(CLS_series)
+        
+#CLS_is_reliable inherits CLS
+class CLS_is_reliable(CLS):
+    def __init__(self,reliable_series):
+        print(reliable_series,"Most owners praised the reliability of the car\n"
+         "and the quality of its interior.")
+        super().__init__(reliable_series)
+
+
+#CLS_450_Coupe inherits "CLS" and "CLS_is_reliable"    
+class CLS_450_Coupe(CLS):
+    def __init__(self,CLS_450_Coupe):
+        print(CLS_450_Coupe,"Passenger capacity is 5");
+        super().__init__(CLS_450_Coupe)
+        
+
+class sold_car(CLS_is_reliable,CLS_450_Coupe):
+    def __init__(self):
+        print("Congrats")
+        super().__init__("about CLS 450 Coupe: \n")
+
+car_num_10254=sold_car()

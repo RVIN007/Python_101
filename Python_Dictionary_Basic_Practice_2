@@ -1,0 +1,43 @@
+MyDictionary={'Person_1': '120 lbs','Person_2': '142 lbs','Person_3': '167 lbs'}
+print(MyDictionary)
+MyDictionary['Person_4']='200 lbs'
+print(MyDictionary)
+MyDictionary['Person_2']='175 lbs'
+print(MyDictionary)
+if 'Person_4' in MyDictionary:
+    print ('Person_4 is in the MyDictionary')
+if 'Person_5' not in MyDictionary:
+    print ('Person_5 is NOT in the MyDictionary')
+
+
+#Delete an existing key-value pair from a dictionary with the del statement 
+#del dictionary_name[key]
+#If the key does not exist, a KeyError exception is raised.
+print('*************************************************************')
+print('Delete an existing key-value pair from a dictionary with the del statement')
+print('del dictionary_name[key]')
+print('If the key does not exist, a KeyError exception is raised.')
+print('*************************************************************')
+print('In order to prevent a KeyError exception from being')
+print('raised, you should use the in operator to')
+print('determine whether a key exists before you')
+print('try to delete it and its associated value.')
+print('')
+print("if 'Person_8' in MyDictionary:")
+print("    del MyDictionary['Person_8']")
+
+    
+del MyDictionary['Person_1']
+print(MyDictionary)
+del MyDictionary['Person_6']
+print(MyDictionary)
+
+#In order to prevent a KeyError exception from being
+#raised, you should use the in operator to
+#determine whether a key exists before you
+#try to delete it and its associated value.
+
+#if 'Person_8' in MyDictionary:
+#    del MyDictionary['Person_8']
+ 
+    
